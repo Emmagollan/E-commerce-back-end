@@ -20,7 +20,9 @@ const seedAll = async () => {
   await seedProductTags();
   console.log('\n----- PRODUCT TAGS SEEDED -----\n');
 
-  process.exit(0);
+  // This line prevents app from coming up after sync
+  // process.exit(0);
+  return Promise.resolve({ synched: true });
 };
 
-seedAll();
+exports.seedAll = seedAll;
