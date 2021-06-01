@@ -25,4 +25,5 @@ const seedAll = async () => {
   return Promise.resolve({ synched: true });
 };
 
-exports.seedAll = seedAll;
+// exports.seedAll = seedAll;
+seedAll();
